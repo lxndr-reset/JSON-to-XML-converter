@@ -15,6 +15,7 @@ public class MainController {
 
     @PostMapping
     public ResponseEntity<String> convertFromBody(@RequestBody String json) {
-        return ResponseEntity.ok(mainService.htmlToXml(json));
+        ResponseEntity<String> ok = ResponseEntity.ok(mainService.htmlToXml(json));
+        return ok;
     }
 }

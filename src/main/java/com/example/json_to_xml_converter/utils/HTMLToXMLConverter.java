@@ -5,6 +5,8 @@ import org.json.XML;
 
 public class HTMLToXMLConverter {
     public static String convert(String json) {
-        return XML.toString(new JSONObject(json));
+        JSONObject object = new JSONObject(json);
+        String string = XML.toString(object);
+        return string;
     }
 }

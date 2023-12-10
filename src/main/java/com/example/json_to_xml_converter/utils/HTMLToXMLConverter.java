@@ -1,10 +1,10 @@
 package com.example.json_to_xml_converter.utils;
 
+import org.json.JSONObject;
+import org.json.XML;
+
 public class HTMLToXMLConverter {
     public static String convert(String json) {
-        char[] jsonChars = json.toCharArray();
-        StringBuilder xml = new StringBuilder();
-
-        return xml.toString();
+        return XML.toString(new JSONObject(json));
     }
 }

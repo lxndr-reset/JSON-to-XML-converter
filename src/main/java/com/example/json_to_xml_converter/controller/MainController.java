@@ -2,10 +2,7 @@ package com.example.json_to_xml_converter.controller;
 
 import com.example.json_to_xml_converter.service.MainService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/json-to-xml")
@@ -17,7 +14,7 @@ public class MainController {
     }
 
     @PostMapping
-    public ResponseEntity<String> convert(@RequestBody String json) {
+    public ResponseEntity<String> convertFromBody(@RequestBody String json) {
         return ResponseEntity.ok(mainService.htmlToXml(json));
     }
 }
